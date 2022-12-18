@@ -172,8 +172,8 @@ class Rabbit :public Creature {
 
 public:
     //Rabbit():Creature() {}
-    Rabbit(int x, int y, int sp) {
-        Creature(x, y, sp);
+    Rabbit(int x, int y, int sp):Creature(x, y, sp) {
+        
     }
     void eat() {}
 
@@ -193,7 +193,6 @@ int main()
     for (int i = 0; i < 3; i++) {
         rabbits.push_back(Rabbit(10 * i, 20, i+1));
     }
-    //Rabbit Gosha(10, 24, 3);
     std::vector <std::string> field;
     for (int i = 0; i < 25; i++) {
         field.push_back("----------------------------------------------------------------------------------------------------");
